@@ -1,0 +1,26 @@
+<div class="sp-card-container">
+    <div *ngFor="let spacexObject of programList" class="sp-card">
+            <div class="display-table-w100">
+                <div class="img-container"><img src="../assets/images/mission-patch-image.png" alt="mission patch image" class="mission-patch-image"></div>
+                <!-- TODO -- uncomment line 6 and comment line 4 to see the dynamic mission_patch image loading if the src url works -->
+                <!-- <div class="img-container"><img [src]="spacexObject.links.mission_patch" alt="mission patch image" class="mission-patch-image"/></div> -->
+                <h4 class="mission-name">{{spacexObject.mission_name}} #{{spacexObject.flight_number}}</h4>
+                <div>Mission Ids:</div>
+                <ul>
+                    <li *ngFor="let missionid of spacexObject.mission_id">{{missionid}}</li>
+                </ul>
+                <div class="card-row">
+                    <label class="row-label">Launch Year: </label>
+                    <div class="row-value">{{spacexObject.launch_year}}</div>
+                </div>
+                <div class="card-row">
+                    <label class="row-label">Successful Launch: </label>
+                    <div class="row-value">{{spacexObject.launch_success}}</div>
+                </div>
+                <div class="card-row">
+                    <label class="row-label">Successful Landing: </label>
+                    <div class="row-value">{{spacexObject.land_success}}</div>
+                </div>
+        </div>
+    </div>
+</div>
