@@ -23,13 +23,13 @@ export class LaunchStatusViewComponent implements OnInit {
   GetSpaceXProgramListByLaunchStatus(launchStatus){
     this.webappserviceObj.GetSpaceXProgramListByLaunchStatus(launchStatus).subscribe(
       (data)=>{
-        console.log("Initial Data: ", data);
+        console.log("Filter By Launch Status Data: ", data);
         this.programListByLaunchStatus=data;
       },
       (error)=>{
-        console.log("Initial Data Failed: ", error);
+        console.log("Filter By Launch Status Data Failed: ", error);
       }
     )
   }
-
+ 
 }

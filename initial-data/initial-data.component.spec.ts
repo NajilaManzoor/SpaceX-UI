@@ -22,4 +22,4 @@ describe('InitialDataComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-});
+}); 

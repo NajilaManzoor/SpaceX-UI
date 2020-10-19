@@ -14,7 +14,6 @@ export class LaunchYearViewComponent implements OnInit {
   constructor(private webappserviceObj:WebappService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
-    console.log("this is data");
     this.route.params.subscribe(params => {
       this.programListByYear=[];
       this.launchYear = params['year'];
@@ -24,11 +23,11 @@ export class LaunchYearViewComponent implements OnInit {
   GetSpaceXProgramListByYear(launchYear){
     this.webappserviceObj.GetSpaceXProgramListByYear(launchYear).subscribe(
       (data)=>{
-        console.log("Initial Data: ", data);
+        console.log("Filter By Launch Status Data: ", data);
         this.programListByYear=data;
       },
       (error)=>{
-        console.log("Initial Data Failed: ", error);
+        console.log("Filter By Launch Status Data Failed: ", error);
       }
     )
   }

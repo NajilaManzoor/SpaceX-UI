@@ -13,7 +13,7 @@ describe('LaunchStatusViewComponent', () => {
     .compileComponents();
   }));
 
-  beforeEach(() => {
+  beforeEach(() => {   
     fixture = TestBed.createComponent(LaunchStatusViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -22,4 +22,4 @@ describe('LaunchStatusViewComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-});
+}); 

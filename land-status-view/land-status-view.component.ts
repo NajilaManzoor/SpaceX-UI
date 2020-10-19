@@ -23,12 +23,13 @@ export class LandStatusViewComponent implements OnInit {
   GetSpaceXProgramListByLandStatus(landStatus){
     this.webappserviceObj.GetSpaceXProgramListByLandStatus(landStatus).subscribe(
       (data)=>{
-        console.log("Initial Data: ", data);
+        console.log("Filter By Land Status Data: ", data);
         this.programListByLandStatus=data;
       },
       (error)=>{
-        console.log("Initial Data Failed: ", error);
+        console.log("Filter By Land Status Data Failed: ", error);
       }
     )
   }
 }
+ 
