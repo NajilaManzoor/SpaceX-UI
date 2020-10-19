@@ -1,0 +1,36 @@
+<div class="spacex-main-container">
+<div class="sp-layout">
+<h1 class="sp-page-header">SpaceX Launch Programs</h1>
+<div class="sp-main-content">
+<div class="sp-left-container">
+    <div class="display-table-w100">
+        <div class="filter-container">
+        <h5 class="filter-header">Filters</h5>
+        <div class="filter-label">Launch Year</div>
+        <div class="filter-list">
+            <ng-container *ngFor="let year of yearList">
+                <button class="filter-option" [routerLink]="['launch-year', year]" routerLinkActive="spacex-active-menu">{{year}}</button>
+            </ng-container>
+        </div>
+        </div>
+        <div class="filter-label">Successful Launch</div>
+        <div class="filter-list">
+            <button class="filter-option" [routerLink]="['launch-status', 'true']" routerLinkActive="spacex-active-menu">True</button>
+            <button class="filter-option" [routerLink]="['launch-status', 'false']" routerLinkActive="spacex-active-menu">False</button>
+        </div>
+        <div class="filter-label">Successful Landing</div>
+        <div class="filter-list">
+            <button class="filter-option" [routerLink]="['land-status', 'true']" routerLinkActive="spacex-active-menu">True</button>
+            <button class="filter-option" [routerLink]="['land-status', 'false']" routerLinkActive="spacex-active-menu">False</button>
+        </div>
+    </div>
+</div>
+<div class="sp-right-container">
+    <router-outlet></router-outlet>
+</div>
+</div>
+<footer class="sp-page-footer">
+    <b>Developed by: </b>
+    <span>Najila Manzoor</span>
+</footer>
+</div>
